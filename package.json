@@ -16,7 +16,7 @@
     "sql",
     "docker"
   ],
-  "author": "Rishabh Gupta",
+  "author": "Ayush Kumar",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1",

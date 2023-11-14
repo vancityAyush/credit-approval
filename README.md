@@ -20,7 +20,7 @@ This project is an assignment given by alemeno in which I have created some APIs
 
 Clone the project
 ```sh
-   git clone https://github.com/rishabhguptaxdev/alemeno-backend-assignment.git
+   git clone https://github.com/vancityAyush/credit-approval.git
 ```
 
 Change to directory
