@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "4d3da4ea-2e56-46b9-a30c-a422f7c49699",
+		"name": "Alemeno-Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15822838"
+	},
+	"item": [
+		{
+			"name": "home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Ayush\",\n    \"last_name\": \"Kumar\",\n    \"age\": 23,\n    \"phone_number\": 9060842578,\n    \"monthly_salary\": 100000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/register",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check eligibility of loan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": 269,\n    \"loan_amount\": 300000,\n    \"interest_rate\": 13,\n    \"tenure\":12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/check-eligibility",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"check-eligibility"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": 269,\n    \"loan_amount\": 300000,\n    \"interest_rate\": 13,\n    \"tenure\":12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/create-loan",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"create-loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view loan details by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/view-loan/9997",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"view-loan",
+						"9997"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make payment of emi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"paid_amount\":30000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/make-payment/269/9997",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"make-payment",
+						"269",
+						"9997"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view loan statement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/view-statement/269/9997",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"view-statement",
+						"269",
+						"9997"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

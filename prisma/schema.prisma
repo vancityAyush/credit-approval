@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  customer_id    Int    @id @default(autoincrement())
+  first_name     String
+  last_name      String
+  age            Int
+  phone_number   BigInt
+  monthly_salary Int
+  approved_limit Int
+  current_debt   Int    @default(0)
+
+  loans Loan[]
+}
+
+model Loan {
+  customer_id          Int
+  loan_id              Int      @id @default(autoincrement())
+  user                 User     @relation(fields: [customer_id], references: [customer_id])
+  loan_amount          Int
+  tenure               Int
+  interest_rate        Float
+  monthly_repayment    Int
+  emis_paid_on_time    Int      @default(0)
+  total_amount_paid    Int      @default(0)
+  amount_with_interest Int      @default(0)
+  start_date           DateTime
+  end_date             DateTime
+}

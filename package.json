@@ -1,0 +1,35 @@
+{
+  "name": "alemeno-backend",
+  "version": "1.0.0",
+  "description": "assignment given by alemeno at internshala-backend of loan approval system ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "alemeno",
+    "internshala",
+    "loan approval system",
+    "node",
+    "express",
+    "sql",
+    "docker"
+  ],
+  "author": "Rishabh Gupta",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "prisma": "^5.5.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.5.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "xlsx": "^0.18.5"
+  }
+}
